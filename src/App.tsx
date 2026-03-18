@@ -2,7 +2,7 @@ import './App.css'
 import Header from './components/header/header'
 import Player from './components/player/playerStyle.tsx'
 import SideBar from './components/sideBar/sideBar'
-import AllSongs from './components/AllSongs/Songs.tsx'
+import AllSongs from './components/ListOfSongs/Songs.tsx'
 
 function App() {
 
