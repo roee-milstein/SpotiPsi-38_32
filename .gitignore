@@ -25,7 +25,6 @@ dist-ssr
 
 READme.md
 eslint.config.js
-index.html
 public/
 tsconfig.json
 tsconfig.app.json
