@@ -1,12 +1,12 @@
 import React from "react";
-import { useStyles } from "./playerSyle";
+import { useStyles } from "./playerStyle";
 
 const Player: React.FC = () => {
-    const { classes } = useStyles(); 
+    const { classes } = useStyles();
     return (
         <div className={classes.placeholder}>
             <p>נגן שירים</p>
-            
+
         </div>
     );
 };
