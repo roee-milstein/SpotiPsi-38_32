@@ -23,7 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 
-Readme.md
+READme.md
 eslint.config.js
 index.html
 public/
