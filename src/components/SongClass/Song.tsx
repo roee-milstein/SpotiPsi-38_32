@@ -1,23 +1,26 @@
+
 import React from "react";
 import { useStyles } from "./SongStyle";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import AddIcon from '@mui/icons-material/Add';
 
-interface SongType {
-    songName: string,
-    singerName: string,
-
+export interface SongType {
+    id:number,
+    name:string,
+    artist:string,
+    album:string
+    
 
 };
 
-const Song: React.FC<SongType> = (song: SongType) => {
-    const { classes } = useStyles();
+const Song: React.FC<SongType> = (song:SongType) => {
+    const { classes } = useStyles(); 
     return (
         <div className={classes.song}>
-            <PlayArrowIcon color="secondary" />  {song.songName}-{song.singerName}
+            <PlayArrowIcon color="secondary"/>  {song.name}-{song.artist}
             <div className={classes.r}>
-                <AddIcon /><FavoriteBorderIcon />
+                <AddIcon/><FavoriteBorderIcon/>
             </div>
 
         </div>
