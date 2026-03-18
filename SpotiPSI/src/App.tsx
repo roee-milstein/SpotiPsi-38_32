@@ -1,15 +1,16 @@
 import './App.css'
+import AllSongs from './components/AllSongs/Songs'
+import SideBar from './components/sideBar/sideBar'
 import Header from './header/header'
 import Player from './player/playerStyle'
-import Song from './SongClass/Song'
 
 function App() {
 
   return (
     <>
       <Header />
-      <Song singerName='altman' songName='hapoel'/>
-      <Song singerName='altman' songName='hapoel'/>
+      <SideBar/>
+      <AllSongs />
       <Player />
       
     </>
