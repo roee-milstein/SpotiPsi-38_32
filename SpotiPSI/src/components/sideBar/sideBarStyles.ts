@@ -7,7 +7,6 @@ export const useStyles = makeStyles({ name: "SideBar" })(() => ({
     padding: "3vh",
     height: "100vh",
     color: "white",
-    backgroundColor: "black",
     fontFamily: "Franklin Gothic Medium, Arial Narrow, Arial, sans-serif",
   },
 
@@ -16,6 +15,7 @@ export const useStyles = makeStyles({ name: "SideBar" })(() => ({
     flexDirection: "row",
     justifyContent: "flex-end",
     width: "15vw",
+    color:"white",
 
     "&:hover": {
       backgroundColor: "purple",
@@ -33,5 +33,6 @@ export const useStyles = makeStyles({ name: "SideBar" })(() => ({
   center: {
     display: "flex",
     paddingRight: "3vw",
+    color:"white"
   },
 }));
