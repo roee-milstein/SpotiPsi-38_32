@@ -1,8 +1,9 @@
 import './App.css'
 import Header from './components/header/header'
 import Player from './components/player/playerStyle.tsx'
-import Song from './components/SongClass/Song'
+import Song from './components/SongClass/Song.tsx'
 import SideBar from './components/sideBar/sideBar'
+import AllSongs from './components/AllSongs/Songs.tsx'
 
 function App() {
 
@@ -13,11 +14,7 @@ function App() {
       </div>
       <div className='mainContent'>
         <div>
-          <Song singerName='altman' songName='hapoel' />
-          <Song singerName='altman' songName='hapoel' />
-          <Song singerName='altman' songName='hapoel' />
-          <Song singerName='altman' songName='hapoel' />
-          <Song singerName='altman' songName='hapoel' />
+          <AllSongs/>
         </div>
         <div>
           <SideBar />
