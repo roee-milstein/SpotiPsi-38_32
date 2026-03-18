@@ -7,17 +7,17 @@ const SideBar = () => {
     <div id="navigationBar">
       <div className="navigationBarItem">
         <p id="center">כל ההודעות</p>
-        <HomeIcon/>
+        <HomeIcon fontSize="medium" className="button" />
       </div>
 
       <div className="navigationBarItem">
         <p id="center">פריטים שנשמרו</p>
-        <LibraryMusicIcon />
+        <LibraryMusicIcon fontSize="medium" className="button" />
       </div>
 
       <div className="navigationBarItem">
         <p id="center">מועדפים</p>
-       <FavoriteIcon />
+        <FavoriteIcon fontSize="medium" className="button" />
       </div>
     </div>
   );

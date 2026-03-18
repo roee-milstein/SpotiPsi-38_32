@@ -1,7 +1,6 @@
 import './App.css'
 import Header from './components/header/header'
 import Player from './components/player/playerStyle.tsx'
-import Song from './components/SongClass/Song.tsx'
 import SideBar from './components/sideBar/sideBar'
 import AllSongs from './components/AllSongs/Songs.tsx'
 
@@ -13,7 +12,7 @@ function App() {
         <Header />
       </div>
       <div className='mainContent'>
-        <div>
+        <div className='songs'>
           <AllSongs/>
         </div>
         <div>
@@ -27,4 +26,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
