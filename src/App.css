@@ -1,3 +1,17 @@
 body{
     background-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.mainContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 98vw;
+    height: 73vh;
+    align-items: center;
+}
+.songs{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
 }

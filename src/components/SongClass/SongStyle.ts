@@ -5,7 +5,8 @@ export const useStyles=makeStyles()(()=>({
         color:"white",
         display:"flex",
         borderStyle:"ridge",
-        borderWidth:"1px"
+        borderWidth:"1px",
+        width:"78vw"
     },
     r:{
         marginLeft: "auto"
