@@ -6,7 +6,6 @@ import Song from "../SongClass/Song";
 // songs type. we use it to know that songs to show
 interface SongsCollection {
     type:string , // can be favorit or songs (all) 
-    arr:SongType[]
 }
 
 
@@ -26,7 +25,7 @@ const SongTable = (type:SongsCollection) => {
     const fetchSongs = async () => {
         setIsLoading(true);
         try {
-        const response = await fetch(`http://127.0.0.1:5001/api/${type}`);
+        const response = await fetch(`http://127.0.0.1:5001/api/songs}`);
         const data = await response.json();
 
         setSongsList(data);
