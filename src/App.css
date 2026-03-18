@@ -1,8 +1,9 @@
-body{
+body {
     background-color: black;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.mainContent{
+
+.mainContent {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -10,8 +11,9 @@ body{
     height: 73vh;
     align-items: center;
 }
-.songs{
+
+.songs {
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
 }

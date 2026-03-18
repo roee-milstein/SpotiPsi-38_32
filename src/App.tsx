@@ -11,21 +11,21 @@ function App() {
       <div>
         <Header />
       </div>
-        <div className='mainContent'>
-          <div>
-            <Song singerName='altman' songName='hapoel'/>
-            <Song singerName='altman' songName='hapoel'/>
-            <Song singerName='altman' songName='hapoel'/>
-            <Song singerName='altman' songName='hapoel'/>
-            <Song singerName='altman' songName='hapoel'/>
-          </div>
-          <div>
-            <SideBar/>     
-          </div>
+      <div className='mainContent'>
+        <div>
+          <Song singerName='altman' songName='hapoel' />
+          <Song singerName='altman' songName='hapoel' />
+          <Song singerName='altman' songName='hapoel' />
+          <Song singerName='altman' songName='hapoel' />
+          <Song singerName='altman' songName='hapoel' />
         </div>
         <div>
-          <Player />
+          <SideBar />
         </div>
+      </div>
+      <div>
+        <Player />
+      </div>
     </>
   )
 }

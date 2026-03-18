@@ -3,7 +3,7 @@ import { useStyles } from "./headerStyle";
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 
 const Header: React.FC = () => {
-    const { classes } = useStyles(); 
+    const { classes } = useStyles();
 
     return (
         <div className={classes.container}>
