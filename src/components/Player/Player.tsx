@@ -1,5 +1,5 @@
 import React from "react";
-import { useStyles } from "./playerStyle";
+import { useStyles } from "./Player.ts";
 
 const Player: React.FC = () => {
     const { classes } = useStyles();

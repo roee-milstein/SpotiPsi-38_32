@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Playlist from "../playlists/Playlists.tsx";
-import { PlaylistType } from "../playlists/Playlists.tsx";
-import { useStyles } from "./playListPageStyles.ts";
+import Playlist, { type PlaylistType } from "../Playlists/Playlists.tsx";
+import { useStyles } from "./playListPage.ts";
+import ModalPopUp from "../modalPopUp/modalPopUp.tsx";
 
 const PlaylistsPage = () => {
     const {classes}=useStyles();
@@ -9,7 +9,7 @@ const PlaylistsPage = () => {
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string>();
 
-    const fetchSongs = async () => {
+    const fetchPlaylists = async () => {
         setIsLoading(true);
         try {
             const response = await fetch("http://127.0.0.1:5001/api/playlists");
@@ -26,13 +26,13 @@ const PlaylistsPage = () => {
     };
 
     useEffect(() => {
-        fetchSongs();
+        fetchPlaylists();
     }, []);
     
     return (
         <div>
             <div className={classes.top}>
-                <button>+ צור פלייליסט</button>
+                <ModalPopUp onPlaylistCreated={fetchPlaylists} />
                 <h1>הפלייליסטים שלי</h1>
             </div>
             <div>

@@ -1,13 +1,12 @@
 
 import { useEffect, useState } from "react";
-import type { SongType } from "../SongClass/Song";
-import Song from "../SongClass/Song";
-import FavoriteSongs from "../FavoritesPage/favoritesPage";
-import AllSongs from "../allSongs/allSongs";
+import FavoriteSongs from "../FavoritesPage/FavoritesPage";
+import AllSongs from "../AllSongs/AllSongs";
+import PlaylistsPage from "../PlayListsPage/playlistspage";
 
 // songs type. we use it to know that songs to show
 interface SongsCollection {
-    type:string , // can be favorit or songs (all) 
+    type:string , // can be favorite or songs (all) 
     setSongs:(arr:[])=>void
 }
 
@@ -59,8 +58,13 @@ const SongTable = ({ type ,setSongs}: SongsCollection) => {
 
 
     useEffect(() => {
-        fetchFacSongs();
-        fetchSongs();
+        console.log(type)
+        if(type=="playlists"){
+            }
+        else{
+            fetchFacSongs();
+            fetchSongs();
+        }
     }, [type]);
 
     return (
@@ -69,6 +73,7 @@ const SongTable = ({ type ,setSongs}: SongsCollection) => {
         {error && <p>{error}</p>}
         {!isLoading && !error && type=="songs"&& <AllSongs songsList={songsList} favList={favList}/>}
         {!isLoading && !error && type=="favorites"&&<FavoriteSongs songsList={songsList} favList={favList}/>}
+        {!isLoading && !error && type=="playlists"&&<PlaylistsPage/>}
         </div>
     );
 };

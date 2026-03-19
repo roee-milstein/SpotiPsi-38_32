@@ -1,5 +1,5 @@
 import React from "react";
-import { useStyles } from "./headerStyle";
+import { useStyles } from "./Header";
 import MusicNoteIcon from '@mui/icons-material/MusicNote';
 
 const Header: React.FC = () => {
