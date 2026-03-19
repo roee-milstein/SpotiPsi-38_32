@@ -2,6 +2,10 @@ import './App.css'
 import Header from './components/header/header'
 import Player from './components/player/playerStyle.tsx'
 import SideBar from './components/sideBar/sideBar'
+import AllSongs from './components/ListOfSongs/Songs.tsx'
+import FavoriteSongs from './components/FavoritesPage/favoritesPage.tsx'
+import PlaylistsPage from './components/PlayListsPage/playlistspage.tsx'
+function App() {
 import { useState } from 'react'
 import SongTable from './components/ListOfSongs/TableSongs.tsx'
 

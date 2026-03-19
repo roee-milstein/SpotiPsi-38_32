@@ -7,10 +7,11 @@ export const useStyles = makeStyles({ name: "SideBar" })(() => ({
     justifySelf: "right",
     alignItems: "center",
     padding: "1.5vh",
-    height: "70vh",
+    height: "320vh",
     width: "17vw",
     color: "white",
     fontFamily: "Franklin Gothic Medium, Arial Narrow, Arial, sans-serif",
+    borderLeft: "2px solid purple",
   },
 
   navigationBarItem: {
