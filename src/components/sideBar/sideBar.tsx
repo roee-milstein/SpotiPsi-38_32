@@ -3,12 +3,17 @@ import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useStyles } from "./sideBarStyles";
 
-const SideBar = () => {
+
+interface songs{
+  setSongsType:(type:string)=>void,
+}
+
+const SideBar = ({setSongsType}:songs) => {
   const { classes } = useStyles();
 
   return (
     <div className={classes.navigationBar}>
-      <div className={classes.navigationBarItem}>
+      <div className={classes.navigationBarItem} onClick={() => setSongsType("songs")}>
         <p className={`${classes.text} ${classes.center}`}>כל ההודעות</p>
         <HomeIcon fontSize="medium" className={classes.button} />
       </div>
@@ -18,7 +23,7 @@ const SideBar = () => {
         <LibraryMusicIcon fontSize="medium" className={classes.button} />
       </div>
 
-      <div className={classes.navigationBarItem}>
+      <div className={classes.navigationBarItem} onClick={() => setSongsType("favorites")}>
         <p className={`${classes.text} ${classes.center}`}>מועדפים</p>
         <FavoriteIcon fontSize="medium" className={classes.button} />
       </div>
