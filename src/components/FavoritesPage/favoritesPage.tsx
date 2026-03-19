@@ -344,7 +344,7 @@ const FavoriteSongs = () => {
             {!isLoading && !error && songsList.map((songID, index) => (
 
                 <div key={index}>
-                    <Song id={parseInt(songID)-1} name={songs[parseInt(songID)-1].name} artist={songs[parseInt(songID)-1].artist} album={songs[parseInt(songID)-1].album} />
+                    <Song id={parseInt(songID) - 1} name={songs[parseInt(songID) - 1].name} artist={songs[parseInt(songID) - 1].artist} album={songs[parseInt(songID) - 1].album} />
                 </div>
             ))}
         </div>
