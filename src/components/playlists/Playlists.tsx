@@ -1,4 +1,4 @@
-import { useStyles } from "./Playlists.ts";
+import { useStyles } from "./Playlists";
 
 export interface PlaylistType {
     id: number,

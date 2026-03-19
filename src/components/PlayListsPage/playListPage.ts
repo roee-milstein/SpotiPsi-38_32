@@ -9,6 +9,6 @@ export const useStyles=makeStyles()(()=>({
         alignItems:"center",
         color:"white",
         padding:"1vw",
-        gap:"50vw"
+        gap:"47vw"
     }
 }))

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useStyles } from "./SongStyle";
+import { useStyles } from "./Song";
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import AddIcon from '@mui/icons-material/Add';
@@ -21,7 +21,7 @@ const Song: React.FC<SongType> = (song: SongType) => {
     const { classes } = useStyles();
 
     const addSong = async (click:string) => {
-        const response = await fetch(`http://127.0.0.1:5001/api/favorites/add`, {
+        const response = await fetch(`http://127.0.0.1:5001/api/favorites/${click}`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',

@@ -1,5 +1,5 @@
-import type { SongTypeServer } from "../ListOfSongs/TableSongs";
-import Song, { type SongType } from "../SongClass/Song";
+import type { SongTypeServer } from "../ListOfSongs/ListOfSongs";
+import Song, { type SongType } from "../Song/Song.tsx";
 
 
 

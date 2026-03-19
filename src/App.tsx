@@ -1,13 +1,9 @@
 import './App.css'
-import Header from './components/header/header'
-import Player from './components/player/playerStyle.tsx'
-import SideBar from './components/sideBar/sideBar'
-import AllSongs from './components/ListOfSongs/Songs.tsx'
-import FavoriteSongs from './components/FavoritesPage/favoritesPage.tsx'
-import PlaylistsPage from './components/PlayListsPage/playlistspage.tsx'
-function App() {
+import Header from './components/Header/Header.tsx'
+import Player from './components/Player/Player.tsx'
+import SideBar from './components/SideBar/sideBar.tsx'
 import { useState } from 'react'
-import SongTable from './components/ListOfSongs/TableSongs.tsx'
+import SongTable from './components/ListOfSongs/ListOfSongs.tsx'
 
 function App() {
   const [songsType, setSongsType] = useState("songs");
