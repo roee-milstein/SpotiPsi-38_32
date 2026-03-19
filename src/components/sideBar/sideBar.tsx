@@ -9,17 +9,17 @@ const SideBar = () => {
   return (
     <div className={classes.navigationBar}>
       <div className={classes.navigationBarItem}>
-        <p className={`${classes.text} ${classes.center}`}>כל ההודעות</p>
+        <p className={`${classes.text}`}>כל ההודעות</p>
         <HomeIcon fontSize="medium" className={classes.button} />
       </div>
 
       <div className={classes.navigationBarItem}>
-        <p className={`${classes.text} ${classes.center}`}>פריטים שנשמרו</p>
+        <p className={`${classes.text}`}>פריטים שנשמרו</p>
         <LibraryMusicIcon fontSize="medium" className={classes.button} />
       </div>
 
       <div className={classes.navigationBarItem}>
-        <p className={`${classes.text} ${classes.center}`}>מועדפים</p>
+        <p className={`${classes.text}`}>מועדפים</p>
         <FavoriteIcon fontSize="medium" className={classes.button} />
       </div>
     </div>
