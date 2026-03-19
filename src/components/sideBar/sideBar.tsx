@@ -3,7 +3,12 @@ import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { useStyles } from "./sideBarStyles";
 
-const SideBar = () => {
+
+interface songs{
+  setSongsType:(type:string)=>void,
+}
+
+const SideBar = ({setSongsType}:songs) => {
   const { classes } = useStyles();
 
   return (

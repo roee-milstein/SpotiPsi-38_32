@@ -7,28 +7,27 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { IconButton } from "@mui/material";
 
 export interface SongType {
-    id: number,
+    id: string,
     name: string,
     artist: string,
     album: string,
+    isFav:boolean,
 };
 
 const Song: React.FC<SongType> = (song: SongType) => {
-    const [isHeartClicked, setIsHeartClicked] = useState(false);
-    let favoriteSongs=[];
+    const [isHeartClicked, setIsHeartClicked] = useState(song.isFav);
+
 
     const { classes } = useStyles();
 
-    const addSong = async (clik:string) => {
-        const response = await fetch(`http://127.0.0.1:5001/api/favorites/${clik}`, {
+    const addSong = async (click:string) => {
+        const response = await fetch(`http://127.0.0.1:5001/api/favorites/add`, {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',
             },
             body: JSON.stringify({songId:song.id}),
         });
-        const data = await response.json();
-        console.log(data);
 };
 
 
@@ -36,7 +35,6 @@ const Song: React.FC<SongType> = (song: SongType) => {
     const switchIcon = () => {
         if (isHeartClicked==false){
             setIsHeartClicked(true);
-            favoriteSongs.push(5);
             addSong("add")
         }
         else{
