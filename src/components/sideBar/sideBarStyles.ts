@@ -4,8 +4,11 @@ export const useStyles = makeStyles({ name: "SideBar" })(() => ({
   navigationBar: {
     display: "flex",
     flexDirection: "column",
-    padding: "3vh",
-    height: "100vh",
+    justifySelf: "right",
+    alignItems: "center",
+    padding: "1.5vh",
+    height: "70vh",
+    width: "17vw",
     color: "white",
     fontFamily: "Franklin Gothic Medium, Arial Narrow, Arial, sans-serif",
   },
@@ -13,9 +16,9 @@ export const useStyles = makeStyles({ name: "SideBar" })(() => ({
   navigationBarItem: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "flex-end",
-    width: "15vw",
-    color:"white",
+    alignItems: "center",
+    height: "10vh",
+    width: "17vw",
 
     "&:hover": {
       backgroundColor: "purple",
@@ -23,16 +26,15 @@ export const useStyles = makeStyles({ name: "SideBar" })(() => ({
   },
 
   text: {
-    fontSize: "14px",
+    fontSize: "16px",
     color: "lightgray",
-    display: "block",
-    padding: "12px",
     textDecoration: "none",
+    margin: 0,
+    flex: 1,
+    textAlign: "center",
   },
 
-  center: {
-    display: "flex",
-    paddingRight: "3vw",
-    color:"white"
+  button: {
+    color: "lightgray",
   },
 }));

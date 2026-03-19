@@ -8,7 +8,7 @@ interface SongsCollection {
 }
 
 
-const AllSongs = (type:SongsCollection) => {
+const allSongs = (type:SongsCollection) => {
     const [songsList, setSongsList] = useState<SongType[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState<string>();
@@ -29,11 +29,12 @@ const AllSongs = (type:SongsCollection) => {
         setIsLoading(true);
         try {
         // גישה לשרת
-        const response = await fetch(`http://127.0.0.1:5001/api/songs`);
+        const response = await fetch(`http://127.0.0.1:5001/api/${type}`);
         const data = await response.json();
 
         // הוספת שירים לסטייט לאחר שהתקבלו מהשרת
         setSongsList(data);
+        
         } catch (error) {
         // הגדרת שגיאה בגישה לשרת
         setError("Something went wrong");
@@ -50,7 +51,7 @@ const AllSongs = (type:SongsCollection) => {
     // רק ברינדור הראשון של הקומפוננטה
     useEffect(() => {
         fetchSongs();
-    }, []);
+    }, [type]);
 
     return (
         <div>
@@ -72,4 +73,4 @@ const AllSongs = (type:SongsCollection) => {
     );
 };
 
-export default AllSongs;
+export default allSongs;
